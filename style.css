@@ -9,7 +9,8 @@
   --text-color: #000;
   --light-text-color: #a5a5a1;
   --footer-bg-color: rgb(18, 1, 1);
-  --footer-text-color: rgb(220, 144, 4);
+  --footer-text-color: #b5b3af;
+  --footer-link-color: #d69513;
   --line-height: 1.6;
 }
 body {
@@ -177,11 +178,24 @@ body {
   color: var(--light-text-color);
   position: relative;
 }
-.footer-heading {
+.footer-heading,
+.footer-last {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.footer-icons ion-icon:hover {
+  color: var(--footer-link-color);
+  transition: color 0.3s ease;
+  transform: scale(1.1);
+}
+
 .footer-heading h1 {
   font-size: 1.2rem;
 }
@@ -189,6 +203,7 @@ body {
 a {
   margin: 1rem 0;
   font-size: 0.8rem;
+  max-width: 42ch;
 }
 .footer-links {
   gap: 1rem;
@@ -201,17 +216,24 @@ a {
   font-size: 0.9rem;
 }
 .footer-container a:hover {
-  color: var(--light-text-color);
+  color: var(--footer-link-color);
   transition: color 0.3s ease;
 }
+/* pseudo class */
 .footer-links::before {
   content: "";
   background-color: rgb(35, 34, 34);
   width: 90%;
-  height: 1px;
+  height: 2px;
   position: absolute;
   display: block;
   top: 185px;
+}
+.footer-last a,
+.footer-last p {
+  text-decoration: none;
+  color: var(--light-text-color);
+  font-size: 0.7rem;
 }
 /* Responsive design for Mobile devices */
 @media (max-width: 480px) {
@@ -276,6 +298,12 @@ a {
     font-size: 1.2rem;
   }
   .footer-links::before {
-    top: 200px;
+    top: 170px;
+  }
+  .footer-container p,
+  a {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    max-width: 75ch;
   }
 }
