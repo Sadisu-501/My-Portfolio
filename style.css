@@ -174,8 +174,9 @@ body {
 /* footer styles */
 .footer-container {
   padding: 2rem;
-  background-color: rgb(18, 1, 1);
-  color: var(--light-text-color);
+  background-color: rgb(28, 2, 50);
+  /* color: var(--light-text-color); */
+  color: rgb(231, 225, 225);
   position: relative;
 }
 .footer-heading,
@@ -211,7 +212,9 @@ a {
 }
 .footer-links a {
   text-decoration: none;
-  color: var(--footer-text-color);
+  /* color: var(--footer-text-color); */
+  color: rgb(231, 225, 225);
+
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -232,7 +235,9 @@ a {
 .footer-last a,
 .footer-last p {
   text-decoration: none;
-  color: var(--light-text-color);
+  /* color: var(--light-text-color); */
+  color: rgb(231, 225, 225);
+
   font-size: 0.7rem;
 }
 /* Responsive design for Mobile devices */
