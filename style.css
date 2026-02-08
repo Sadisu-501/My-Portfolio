@@ -1,10 +1,11 @@
 *,
 *::before,
-*:after {
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* root styles */
 :root {
   --text-color: #000;
   --light-text-color: #a5a5a1;
@@ -12,10 +13,22 @@
   --footer-text-color: #b5b3af;
   --footer-link-color: #d69513;
   --line-height: 1.6;
+  --transition: all 0.3s ease;
 }
+/* General styling */
 body {
   font-family: "inter", sans-serif;
   color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+.card:hover,
+.view-project:hover ion-icon,
+.footer-icons ion-icon:hover {
+  transition: var(--transition);
 }
 
 /* navigation styles */
@@ -30,19 +43,20 @@ body {
   gap: 2rem;
 }
 .nav-contents a {
-  text-decoration: none;
   font-weight: 500;
   color: var(--text-color);
   font-size: 1rem;
 }
 .nav-contents a:hover {
   color: var(--light-text-color);
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
+.logo,
+.hero-container h1 {
+  font-family: "Smooch Sans", sans-serif;
+  letter-spacing: 1px;
 }
+
 #menuBtn {
   display: none;
   font-size: 1.6rem;
@@ -69,7 +83,7 @@ body {
   color: var(--light-text-color);
   max-width: 70ch;
   text-align: justify;
-  line-height: 20px;
+  line-height: var(--line-height);
 }
 /* shortcut links */
 .short-cuts {
@@ -78,16 +92,13 @@ body {
   justify-content: start;
   gap: 3rem;
   padding: 2rem;
-  /* border-bottom: 1px solid; */
 }
 .short-cuts a {
-  text-decoration: none;
   color: var(--light-text-color);
   font-weight: 600;
 }
 .short-cuts a:hover {
   color: #000;
-  transition: color 0.3s ease;
 }
 
 /* General container styling */
@@ -154,7 +165,7 @@ body {
 }
 .view-project ion-icon {
   font-size: 1.1rem;
-  transition: transform 0.3s ease;
+  transition: var(--transition);
 }
 .view-project:hover ion-icon {
   transform: translateX(4px);
@@ -168,8 +179,7 @@ body {
 }
 
 .card a:hover {
-  color: var(--lighttext-color);
-  transition: color 0.3s ease;
+  color: var(--light-text-color);
 }
 /* footer styles */
 .footer-container {
@@ -192,17 +202,17 @@ body {
 }
 .footer-icons ion-icon:hover {
   color: var(--footer-link-color);
-  transition: color 0.3s ease;
   transform: scale(1.1);
 }
 
 .footer-heading h1 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family: "Smooch Sans", sans-serif;
 }
 .footer-container p,
 a {
   margin: 1rem 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   max-width: 42ch;
 }
 .footer-links {
@@ -210,16 +220,13 @@ a {
   display: flex;
 }
 .footer-links a {
-  text-decoration: none;
-
   color: rgb(231, 225, 225);
 
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .footer-container a:hover {
   color: var(--footer-link-color);
-  transition: color 0.3s ease;
 }
 /* pseudo class */
 .footer-links::before {
@@ -233,24 +240,21 @@ a {
 }
 .footer-last a,
 .footer-last p {
-  text-decoration: none;
-
   color: rgb(231, 225, 225);
-
   font-size: 0.7rem;
 }
+
 /* Responsive design for Mobile devices */
 @media (max-width: 480px) {
 }
 
 /* Responsive design for Tablet devices */
-
 @media (max-width: 768px) {
   .nav-contents {
     display: none;
   }
   .logo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   #menuBtn {
     display: block;
@@ -259,7 +263,6 @@ a {
     cursor: pointer;
     color: var(--light-text-color);
     transform: scale(1.1);
-    transition: all 0.3s ease;
   }
   .nav-contents {
     position: absolute;
@@ -309,5 +312,8 @@ a {
     margin: 1rem 0;
     font-size: 0.8rem;
     max-width: 75ch;
+  }
+  .logo {
+    font-size: 1.6rem;
   }
 }
