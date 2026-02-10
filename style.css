@@ -121,6 +121,13 @@ a {
     box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease;
+}
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Hover effect */
