@@ -51,8 +51,7 @@ a {
   color: var(--light-text-color);
   transition: var(--transition);
 }
-.logo,
-.hero-container h1 {
+.logo {
   font-family: "Smooch Sans", sans-serif;
   letter-spacing: 1px;
 }
