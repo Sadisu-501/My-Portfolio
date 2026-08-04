@@ -1,12 +1,12 @@
 const menuBtn = document.getElementById("menuBtn");
 const navContents = document.querySelector(".nav-contents");
-
+const cards = document.querySelectorAll(".card");
 menuBtn.addEventListener("click", () => {
   navContents.classList.toggle("active");
 });
 
-// Select all cards
-const cards = document.querySelectorAll(".card");
+
+
 
 // Use Intersection Observer to detect when cards enter viewport
 const observer = new IntersectionObserver(
