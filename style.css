@@ -92,11 +92,14 @@ a {
   gap: 3rem;
   padding: 2rem;
 }
-.short-cuts a {
+.short-cuts button {
   color: var(--light-text-color);
   font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
-.short-cuts a:hover {
+.short-cuts button:hover {
   color: #000;
 }
 
