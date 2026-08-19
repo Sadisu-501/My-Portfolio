@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menuBtn");
 const navContents = document.querySelector(".nav-contents");
 const cards = document.querySelectorAll(".card");
+const toggleIcon = document.getElementById("toggleIcon");
 
 menuBtn.addEventListener("click", () => {
   navContents.classList.toggle("active");
@@ -24,4 +25,8 @@ const observer = new IntersectionObserver(
 // Attach observer to each card
 cards.forEach((card) => {
   observer.observe(card);
+});
+
+toggleIcon.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 });
