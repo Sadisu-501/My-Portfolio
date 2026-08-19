@@ -23,14 +23,6 @@ body {
   z-index: 500;
 }
 
-/* Dark mode styles */
-body.dark {
-  background-color: rgb(0, 11, 5);
-  color: white;
-}
-body.dark .nav-contents a {
-  color: white;
-}
 a {
   text-decoration: none;
   transition: var(--transition);
@@ -41,6 +33,45 @@ a {
   transition: var(--transition);
 }
 
+/* Dark mode styles */
+body.dark {
+  background-color: rgb(0, 11, 5);
+  color: white;
+}
+body.dark .nav-contents a {
+  color: white;
+}
+body.dark .nav-contents a:hover {
+  color: var(--light-text-color);
+}
+body.dark .footer-container {
+  background-color: rgb(1, 24, 12);
+  color: whitesmoke;
+}
+body.dark .short-cuts button:hover {
+  color: white;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  padding: 2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dark-mode-toggle:hover {
+  opacity: 0.8;
+}
+.dark-mode-toggle p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 /* navigation styles */
 .container {
   display: flex;
@@ -261,16 +292,6 @@ a {
 .footer-last p {
   color: rgb(231, 225, 225);
   font-size: 0.7rem;
-}
-
-.dark-mode-toggle {
-  font-size: 2rem;
-  position: fixed;
-  right: 0;
-  top: 5rem;
-  transform: translateY(-50%);
-  padding: 2rem;
-  cursor: pointer;
 }
 
 /* Responsive design for Mobile devices */
