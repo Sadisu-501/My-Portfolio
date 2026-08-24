@@ -35,9 +35,7 @@ a {
 
 /* Dark mode styles */
 body.dark {
-  background-color: #181818;
-  /* background-color: #202020; */
-
+  background-color: #160c28;
   color: white;
 }
 body.dark .nav-contents a {
